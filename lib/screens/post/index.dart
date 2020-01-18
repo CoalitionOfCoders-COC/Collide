@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:Collide/partials/cardposts.dart';
 
 /*
  * Post Index is Stateful because new post may be loaded without redirect
@@ -44,7 +45,7 @@ class _PostIndex extends State<PostIndex> {
                 ), //gear icon
               ],
               // tab bar for navigation
-              bottom:TabBar(
+              bottom: TabBar(
                 isScrollable: true,
                 tabs: [
                   Tab(text: 'Sample'),
@@ -56,13 +57,7 @@ class _PostIndex extends State<PostIndex> {
                 ],
               ),
             ),
-            body: ListView.builder(
-              itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  child: Text("Welcome to Post Index!!!"),
-                );
-              },
-            )
+            body: CardPosts() // found in partials/cardposts.dart
         ),
     );
   } // widget

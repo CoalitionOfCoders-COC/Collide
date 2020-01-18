@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-class PostNewPublish extends StatelessWidget{
+class Navbar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold();
 
-    
-    
   }
 }

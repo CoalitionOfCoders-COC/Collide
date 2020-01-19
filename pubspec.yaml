@@ -54,6 +54,7 @@ flutter:
     - assets/new_post_btn.png
     - assets/user_btn_selected.png
     - assets/user_btn_unselected.png
+    - assets/collide_logo.png
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

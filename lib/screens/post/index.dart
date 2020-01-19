@@ -5,8 +5,9 @@ import 'package:provider/provider.dart';
 import 'package:Collide/screens/post/show.dart';
 import 'package:Collide/controllers/hexcolor.dart';
 
-
+//Declare variables for later use
 Color backGroundColor = HexColor('C6A477');
+
 /*
  * Post Index is Stateful because new post may be loaded without redirect
  */

@@ -29,31 +29,25 @@ final dummyPost = new Post(
 int _selectedIndex = 0;
 
 Future<void> _onItemTapped(int index) async {
-  // switch(index){
-  //   case 0:{
-  //     print('home');
-  //     break;
-  //   } case 1:{
-  //     print('user profile');
-  //     break;
-  //   } case 2:{
-  //     print('create new post!');
-  //     //summon controller later redirect
-  //     await createPost(dummyPost);
-  //     break;
-  //   } case 3: {
-  //     print('notifications');
-  //     break;
-  //   } case 4: {
-  //     print('messages');
-  //     break;
-  //   }
-  // }
-
-  if(index == 1){
-    await createPost(dummyPost);
+  switch(index){
+    case 0:{
+      print('home');
+      break;
+    } case 1:{
+      print('user profile');
+      break;
+    } case 2:{
+      print('create new post!');
+      await createPost(dummyPost);
+      break;
+    } case 3: {
+      print('notifications');
+      break;
+    } case 4: {
+      print('messages');
+      break;
+    }
   }
-  
 }
 class Navbar extends StatelessWidget{
   @override

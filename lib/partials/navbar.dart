@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:Collide/controllers/posts.dart';
 import 'package:Collide/models/post.dart';
+import 'package:Collide/controllers/hexcolor.dart';
+
+
+// class HexColor extends Color {
+//   static int _getColorFromHex(String hexColor) {
+//     hexColor = hexColor.toUpperCase().replaceAll("#", "");
+//     if (hexColor.length == 6) {
+//       hexColor = "FF" + hexColor;
+//     }
+//     return int.parse(hexColor, radix: 16);
+//   }
+
+//   HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
+// }
+Color backGroundColor = HexColor('C6A477');
 
 // DUMMY DATA
 final dummyPost = new Post(
@@ -43,26 +58,61 @@ Future<void> _onItemTapped(int index) async {
 class Navbar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: const <BottomNavigationBarItem>[
+    return Container(
+
+    //TOP WHITE BORDER
+    decoration: const BoxDecoration(
+      border: Border(
+        top: BorderSide(width: 1.0, color: Color(0xFFFFFFFFFF)),
+      ),
+    ),
+
+    //NAVIGATION BUTTONS CONTAINER
+    child: BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: backGroundColor,
+      items:  <BottomNavigationBarItem>[
+
+        //HOME BUTTON
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          title: Text('Home'),
+          icon: Image.asset('assets/home_btn_unselected.png'),
+          title: Container(height: 0),
+          // activeIcon: Image.asset('assets/home_btn_selected.png')
         ),
+
+        //USER PROFILE BUTTON
         BottomNavigationBarItem(
-          icon: Icon(Icons.business),
-          title: Text('New Post'),
+          icon: Image.asset('assets/user_btn_unselected.png'),
+          title: Container(height: 0),
+        ),
+
+        //NEW POST BUTTON
+        BottomNavigationBarItem(
+          icon: Image.asset('assets/new_post_btn.png'),
+          title: Container(height: 0),
+        ),
         
-        ),
+        //NOTIFICATIONS BUTTON
         BottomNavigationBarItem(
-          icon: Icon(Icons.school),
-          title: Text('School'),
+          icon: Image.asset('assets/bell_btn_unselected.png'),
+          title: Container(height: 0),
         ),
+
+        //MESSAGES BUTTON
+        BottomNavigationBarItem(
+          icon: Image.asset('assets/chat_btn_unselected.png'),
+          title: Container(height: 0)
+        )
+
       ],
-      selectedItemColor: Colors.amber[800],
       currentIndex: _selectedIndex,
       onTap: _onItemTapped,
-    );   
+    ),
+    
+    );
+    
+    
+
   }
 }
 

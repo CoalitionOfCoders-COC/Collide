@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:Collide/controllers/posts.dart';
 import 'package:provider/provider.dart';
 import 'package:Collide/screens/post/show.dart';
+import 'package:Collide/controllers/hexcolor.dart';
 
+
+Color backGroundColor = HexColor('C6A477');
 /*
  * Post Index is Stateful because new post may be loaded without redirect
  */
@@ -21,6 +24,7 @@ class _PostIndex extends State<PostIndex>{
     final posts = Provider.of<Posts>(context).posts; //get post Provider
 
     return Scaffold(
+      backgroundColor: backGroundColor,
       body: ListView.builder(
         itemCount: posts.length,
         itemBuilder: (BuildContext context, int index){

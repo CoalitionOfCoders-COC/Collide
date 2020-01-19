@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:Collide/models/post.dart';
 import 'package:flutter/material.dart';
-import 'package:Collide/screens/post/show.dart';
+// import 'package:Collide/screens/post/show.dart';
 import 'package:http/http.dart' as http;
 
 /*

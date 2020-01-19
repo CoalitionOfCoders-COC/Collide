@@ -47,13 +47,14 @@ class _PostIndex extends State<PostIndex> {
               // tab bar for navigation
               bottom: TabBar(
                 isScrollable: true,
+                //indicatorColor: Colors.brown[300],
                 tabs: [
-                  Tab(text: 'Sample'),
-                  Tab(text: 'Sample'),
-                  Tab(text: 'Sample'),
-                  Tab(text: 'Sample'),
-                  Tab(text: 'Sample'),
-                  Tab(text: 'Sample'),
+                  Tab(text: 'Film'),
+                  Tab(text: 'Photography'),
+                  Tab(text: 'Coding'),
+                  Tab(text: 'Graphic Design'),
+                  Tab(text: 'Music'),
+                  Tab(text: 'Other'),
                 ],
               ),
             ),

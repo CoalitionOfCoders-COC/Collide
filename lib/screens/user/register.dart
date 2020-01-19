@@ -11,9 +11,7 @@ Color white = HexColor('FFFFFF');
 Color grey = HexColor('D7E3E0');
 
 //on form submit register
-Future<void> _submit(BuildContext context) async {
-  await Provider.of<Auth>(context, listen: false).signUp('john@gmail.com', '123456');
-}
+
 
 class RegisterUser extends StatelessWidget{
   static const routeName = '/register';
@@ -42,12 +40,8 @@ class RegisterUser extends StatelessWidget{
                     color: white,
                   ), 
                 ),
-                onPressed: () {
-
-                  _submit(context);
-                  
-
-                },),
+                onPressed: (){}
+              ),
             ],)
           )
       ),

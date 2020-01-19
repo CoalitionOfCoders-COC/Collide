@@ -57,8 +57,16 @@ class _PostIndex extends State<PostIndex> {
                 ],
               ),
             ),
-            body: CardPosts() // found in partials/cardposts.dart
+            body: buildCardsList()
         ),
     );
   } // widget
+  
+  Widget buildCardsList(){
+    return ListView.builder(
+      itemBuilder: (BuildContext context, int index) => CardPosts() // from partials/cardposts.dart
+    );
+  } //widget buildCardsList
 } // class _PostIndex
+
+

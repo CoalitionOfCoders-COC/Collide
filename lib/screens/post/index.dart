@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:Collide/partials/cardposts.dart';
+import 'package:Collide/screens/user/profile.dart';
+
 
 /*
  * Post Index is Stateful because new post may be loaded without redirect
@@ -41,11 +43,14 @@ class _PostIndex extends State<PostIndex> {
                     Icons.settings,
                     color: Colors.white,
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => UserProfile()));
+                  }
                 ), //gear icon
               ],
               // tab bar for navigation
               bottom: TabBar(
+                indicatorColor: Colors.brown[300],
                 isScrollable: true,
                 //indicatorColor: Colors.brown[300],
                 tabs: [

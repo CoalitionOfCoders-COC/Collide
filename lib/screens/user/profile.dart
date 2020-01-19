@@ -28,6 +28,7 @@ class _UserProfile extends State<UserProfile> {
                 onPressed: null,
               )
             ],
+            flexibleSpace: FlexibleSpaceBar(),
             bottom: TabBar(
               indicatorColor: Colors.brown[300],
               tabs: [

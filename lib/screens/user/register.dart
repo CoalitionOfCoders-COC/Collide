@@ -40,7 +40,11 @@ class RegisterUser extends StatelessWidget{
                     color: white,
                   ), 
                 ),
-                onPressed: (){}
+                onPressed: ()async {
+                  await Provider.of<Auth>(context, listen: false).signUp(
+                    'john@gmail.com', '123456'
+                  );
+                }
               ),
             ],)
           )

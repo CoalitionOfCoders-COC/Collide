@@ -77,7 +77,7 @@ class _PostIndex extends State<PostIndex> {
                 itemCount: posts.length,
                 itemBuilder: (BuildContext context, int index) => 
                   InkWell(
-                    child:CardPosts(),
+                    child: CardPosts(),
                     onTap: () { 
                       Navigator.push(context, MaterialPageRoute(builder: (context) => ShowPost(data: posts[index])));
                     },
